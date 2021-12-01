@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'fantasy', sans-serif;
+    min-height: 100vh;
+    background-image:linear-gradient (155deg, #e4f972 0, #caf36c 16.67%, #a9e862 33.33%, #80d855 50%, #4fc84b 66.67%, #00bc49 83.33%, #00b54e 100%);
+}
+
+
+.container{
+    width: 100%;
+    position: absolute;
+    top:30%;
+    transform:trasladateY(-50%);
+    text-align:center;
+    color:black;
+}
+
+.container h1{
+    font-size: 160px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url("..//img/not-img404.jpg");
+    position:  center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container a{
+    text-decoration: none;
+    background: tomato;
+    color: aliceblue;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.5;
+}
+
+.container a:hover{
+    background: mediumturquoise;
+}

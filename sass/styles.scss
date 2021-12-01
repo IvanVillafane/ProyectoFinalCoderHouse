@@ -1,0 +1,517 @@
+
+/*APLICANDO VARIABLES*/
+@import"../libs/boostrap/scss/bootstrap.scss";
+@import ".//partials/fuentes";
+@import "../libs/boostrap/scss/variables";
+@import"../libs/boostrap/scss/grid";
+@import"../libs/boostrap/scss/reboot";
+@import"../libs/boostrap/scss/utilities";
+
+
+$principal-color:rgb(7, 7, 7); 
+$secondary-color:black;
+$terciary-color:rgb(206, 17, 17);
+$font-color:white;
+$box-shadow:0 2px 10px 0 grey 0;
+$limit:10;
+$unit:8px;
+$solotexto:soloEstoyProbando;
+
+/*Funciones remplazando*/
+@function size($value){
+    @return $value * $unit;
+}
+/*APLICANDO MIXIN*/
+@mixin  reset-pm {padding: 0;
+    margin: 0;
+    
+}
+@mixin btn ($background-color,$color,$bold){
+    background-color: $background-color;
+    color: $color;
+    border-radius: 50px;
+    padding: 20px 3px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @if ($bold = 'true') {font-weight: bolder;
+        
+    }
+}
+
+section .probando{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+    @if ($solotexto==soloEstoyProbando) {
+        background-color: #2d688b;
+
+    }
+    @else if($solotexto==PuebaUno)
+    {background-color: #ff0601;}
+    @else if ($solotexto==prueba2)
+    {background-color: #0c1cca;}
+    @else {background-color: #080808;}
+}
+}
+
+$enable-rounded: false; /*su valor real es true*/
+$enable-shadows: true ;/*pequeña sombra*/
+$enable-gradients:true;/*Degradado o gradiente */
+/*juego con el boton*/
+$btn-padding-y: .8rem;              
+$btn-padding-x: 1.5rem;        
+$btn-border-radius: 1rem;    
+$btn-font-family:arial; /*Fuente xD*/
+
+/**VOY A DEFINIR PATRON DE COLORES**/
+
+$primary: $principal-color;  /*VOY A MODIFICARLES LAS VARIABLES NATIVAS DE BOOSTRAP MODIFIQUE EL AZUL NATIVO EN ESTE CASO*/
+
+*{
+    @include reset-pm(0,0);
+    box-sizing: border-box;
+}
+body{
+    background-color: $principal-color black 0.125rem solid;
+    color:rgb(255, 255, 255);
+    font-size: 1rem;
+}
+a{
+    color:$secondary-color;
+    text-decoration:none;
+}
+
+h2 {
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: size(6);/*Funciones remplazando*/
+}
+
+h3{
+    font-weight: lighter;
+    color: #f8f8f8;
+    font-size: size(3);/*Funciones remplazando*/
+}
+
+
+
+.btn-primary{
+    border-bottom: 0.1875rem solid rgba(146, 143, 143, 0.27);
+}
+
+
+
+
+
+
+
+hr {
+    opacity: 1
+    width $widthn1 
+    height 0.9375rem !important;
+    background-color: linear-gradient(to right, #0497f8, #111b80)
+    margin auto
+
+
+}
+
+.img-logo{
+    width: 0.5rem ;
+    height: 0.5rem;
+}
+
+.servicio-fila{
+    width: $widthn1 !important;
+    text-align: center;
+}
+
+
+@media(max-width:36rem){
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+
+    }
+}
+
+@media(max-width:75rem){
+    #local{
+        flex-wrap: wrap;
+        padding-top: 1.875rem;
+    }
+    .wrapper{
+        width: $widthn1;
+        margin: auto;
+        padding-top: 3.125rem;
+    }
+}
+
+
+.map{
+    width: $widthn1;
+    height: 31.25rem;
+}
+
+#local{
+    background-color: $colorblanco;
+    padding-bottom: 18.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 50%;
+    margin-left: 6.25rem;
+    padding-top: 9.375rem;
+}
+
+#numeros-local div{
+    padding: 0 1.25rem 0 0;
+    height: 3rem;
+}
+
+#numeros-local div:not(last-child){
+    border-right:$colornergro;
+}
+
+#numeros-local div:not(:first-child){
+    padding-left: 1.25rem;
+}
+
+#numeros-local p{
+    margin: 0;
+}
+
+/*cursos*/
+
+#main-cursos{
+    background-color: #0497f8;
+    color: $colorblanco;
+    width: $widthn1 !important;
+    padding: 4.375rem;
+}
+
+.banner {color: $colorblanco;
+    font-family: fantasy;
+    font-size: 3.125rem;
+    font-weight: 56.25rem;
+    line-height: 2.5rem;
+    margin-top: none;
+    
+    
+}
+h3 {
+
+    color: $colornergro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: 56.25rem;
+    line-height: 3.125rem;
+    padding: 0.3125rem;
+    text-align:start ;
+
+}
+
+.tipo{
+    justify-content: end;
+    padding-top: 2.5rem;
+}
+
+#descuentos{
+    background-color: #0497f8 !important;
+    color: red;
+    background: local;
+    display: flex;
+}
+
+h5{
+    color:$colornergro;
+    border: none;
+    text-align: left;
+    height: 1.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    font-size: 20px;
+}
+
+h4{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #dad8d8;}
+
+
+/*APLICANDO PORPIEDADES DE SASS*/
+
+ul{ 
+    list-style: none;
+
+    li{
+        list-style: none;
+        display: inline-block;
+        padding: 15px;
+
+        /*NEFTING EN TEXTO*/
+
+        a {
+            @include btn($terciary-color,$secondary-color,'true');
+            box-shadow: $box-shadow;
+            color: rgb(253, 247, 247);
+            font-size:$font-size;
+            text-decoration: none;
+            transform:uppercase;
+            text-align: center;
+         
+        &:hover {@include btn($secondary-color,$terciary-color,'false') }}
+        
+        } 
+
+       
+    }
+
+
+
+
+.img-logo{
+    width: 12.5rem ;
+    height: 12.5rem;
+}
+
+body{
+    background-color: #000000;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 18.75rem;
+    color: #ffffff;
+
+}
+
+.bg-dark{
+    background-color: var(--dark)--bs-dark !important;
+}
+
+h1{
+    color: #ffffff;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+}
+
+.bg-dark-x{
+    background-color: rgb(14, 13, 13);
+    border:none;
+}
+
+
+.form-control ,btn {
+    min-height: 3.125rem;
+    line-height: initial;
+
+}
+
+.img-1{
+    background-image: url("..//img/jonas-leupe-dk4OR4Ap_c4-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2{
+    background-image: url("https://www.yorokobu.es/src/uploads/2017/08/IPHONE12.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.btn{
+    color: #fff9f9;
+
+
+}
+
+
+/*BEM*/
+*{
+   @include reset-pm();
+    box-sizing: border-box;
+}
+
+.contenedora{
+    max-width: 62.5rem;
+    width:90%;
+    margin:0  auto;
+    color: #ffeaea;
+
+
+&.contenedora__card{
+    color: #ffe6e6;
+    border-radius: 0.9375rem;
+    padding: 1.25rem;
+    display: inline-flexbox;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+&.contenedora__thumbnail{
+    width: 40.625rem;
+    height: 12.5rem;
+    background-color: #131212;
+    color: #ffffff;
+    margin-right: 1.25rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    display: inline-block;
+}
+
+&.contenedora__titulo{
+    
+    font-family: fantasy;
+    font-size: 1.875rem;
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+
+ }
+
+&.contenedora__enlace{
+    color: #131212;
+
+}
+&.contenedora__parrafo{
+    background-color: #dad8d8;
+    line-height: 1.75rem;
+    color: #f8f8f8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}}
+
+.boton{
+    border: none;
+    min-width: 11.25rem;
+    height: 3.125rem;
+    padding: 0 1.875rem;
+    background: #131212;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 6.25rem;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: slateblue;
+    transition: .3s ease all;
+}
+.boton__icono{
+    width: 6.25rem;
+    font-size: 2.5rem;
+}
+.boton:hover{
+    background: burlywood;
+    text-decoration: none;
+}
+.boton--absolute{
+    position: absolute;
+    right: 3.125rem;
+    bottom: -1.5625rem;
+}
+
+.boton__texto{
+    font-weight: 37.5rem;
+}
+
+.frase{
+    text-align: center;
+    margin: 4.375rem 0;
+
+&.frase__texto{
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 37.5rem;
+    font-style: italic;
+}
+
+}
+
+/*Para los ultimos 3 botones*/
+.tecnicos{
+    border-radius: 50%;
+    width: 15.625rem;
+    flex: 0 1 12.5rem;
+    text-align: center;
+     margin: 0 0.625rem; 
+}
+
+.compras{
+text-align: center;}
+
+.btn { 
+    color: #fff;
+    background-color: #3bb1f5;
+    padding: 0.5rem 0.75rem;
+    border: 0.0625rem solid #2d688b;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-size: 16px;
+    &.btn__icon {
+        display: inline-block;
+        margin-right: 4px;
+    }
+    &:hover{
+        @include btn($terciary-color,$secondary-color ,'true' );
+        box-shadow: $box-shadow;
+    }
+    &.btn--success {
+        
+        background-color: green;
+        color: #ffffff;
+        border: 0.125rem solid green;
+        border-radius: 0.25rem;
+    }
+    &.btn--danger {
+        @include btn($principal-color,$secondary-color ,'true' );
+        background-color: #f05654;
+        border: 0.0625rem solid #e00400; 
+    }
+    &:hover{
+        @include btn($secondary-color,$terciary-color,'true');
+        box-shadow: $box-shadow;}
+        &:hover{@include btn ($terciary-color,$secondary-color ,'true' )}
+    }
+
+    .feature__text {
+        font-size: x-large !important;
+        color: #000000 1px solid;
+        font-family:cursive ;
+    }
+
+    @for $i from 1 to $limit{
+
+    .m-#{$i}{margin: $i*$unit}
+.p-#{$i}{
+    padding: $i *$unit;
+}
+.py-#{$i}{
+    padding: $i * $unit 0;
+}
+}
+
+
+img >.container-fluid{
+    width: 200px;
+    height: auto;
+  
+@media (min-width: 1000px) {    
+     flex:auto;
+     display: contents;
+     width: 300px;
+     justify-content: space-around;
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {     flex-wrap: wrap;
+}
+}
